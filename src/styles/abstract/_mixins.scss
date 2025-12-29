@@ -1,0 +1,37 @@
+@use "./variable" as *;
+
+// button mixin
+@mixin button($bg,$color,$padding-y,$padding-x,$radius) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg;
+  color: $color;
+  padding: $padding-y $padding-x;
+  border: 1px solid $bg;
+  border-radius: $radius;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: $bg;
+    background-color: $white-color;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// Text formatting mixin
+@mixin text($size,$weight,$color,$line-height,$align,$transform) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: $line-height;
+  text-align: $align;
+  text-transform: $transform;
+}

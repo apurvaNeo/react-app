@@ -1,0 +1,20 @@
+@use "../../styles/abstract/variable" as *;;
+@use "../../styles/abstract/mixins.scss" as *;
+
+.btn_wrapper{
+    .btn-primary{
+        @include button($primary-color, $white-color, 10px, 25px, 5px);
+        border: 1px solid $primary-color;
+        &:hover {
+            border: 1px solid $primary-color;
+        }
+    }
+}
+.sectionHead{
+    .section_title{
+        @include text(40px,bold,$secondary-color,50px,center,capitalize);
+    }
+    .section_text{
+        @include text(15px,normal,#28384E,26px,center,capitalize);
+    }
+}

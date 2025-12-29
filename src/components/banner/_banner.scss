@@ -1,0 +1,13 @@
+@use "../../styles/abstract/variable" as *;
+@use "../../styles/abstract/mixins.scss" as *;
+.banner_section{
+    .banner_wrapper{
+        h2.banner_title{
+            @include text(50px,bold,$white-color,70px,left,capitalize);
+        }
+        .banner_text{
+            @include text(15px,normal,$white-color,25px,left,unset);
+        }
+        
+    }
+}

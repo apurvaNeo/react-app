@@ -1,0 +1,61 @@
+@use "../../styles/abstract/variable" as *;;
+@use "../../styles/abstract/mixins.scss" as *;
+
+.footer_wrapper{
+    background-color: #011021;
+    padding: 40px 0;
+    .footer_title{
+        @include text(18px,bold,$white-color,26px,left,capitalize);
+    }
+    .fdect_1{
+        p{
+            @include text(14px,normal,$white-color,18px,left,capitalize);
+        }
+        .email-group{
+            .form-control{
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            .btn{
+                font-size: 15px;
+                padding: 10px 25px;
+                background-color: #1B498A;
+                border-color: #1B498A;
+            }
+        }
+    }
+    .fsect_2{
+        ul{
+            li{
+                 @include text(15px,normal,$white-color,18px,left,capitalize);
+                 margin-bottom: 10px;
+                 display: inline-block;
+                 width: 100%;
+                 transition: 0.3s all ease-in-out;
+                &:hover{
+                    color: $primary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .fsect_3{
+        p{
+            @include text(15px,normal,$white-color,18px,left,capitalize);
+        }
+        ul{
+            li{
+                font-size: 35px;
+                margin-right: 10px;
+                a{
+                    display: inline-block;
+                    transition: 0.3s all ease-in-out;
+                    &:hover{
+                        transform: translateY(-10px);
+                       
+                    }
+                }
+            }
+        }
+    }
+}

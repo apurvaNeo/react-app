@@ -1,0 +1,16 @@
+@use "./abstract/variable" as *;
+@use "./abstract/mixins" as *; 
+
+@use "./base/reset";
+@use "./base/typography";
+@use "./base/common";
+
+@use "../components/banner/banner";
+@use "../components/service/services";
+@use "../components/about/about";
+@use "../components/project/projects";
+@use "../components/work/workwith";
+
+
+@use "../layout/footer/footer";
+@use "../layout/header/header";

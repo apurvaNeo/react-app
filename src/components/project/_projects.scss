@@ -1,0 +1,44 @@
+@use "../../styles/abstract/variable" as *;;
+@use "../../styles/abstract/mixins.scss" as *;
+
+
+.projects_section{
+    background-image: url(../../assets/images/bg_projects.png);
+    // height: 400px;
+    padding:80px 0;
+    background-size: 100% 100%;
+    .sectionHead{
+        .section_title{
+            color: $white-color;
+        }
+        .section_text{
+            color: $white-color;
+            margin-bottom: 50px;
+        }
+    }
+ 
+    .project_card{
+        // margin:0 20px 0;
+        .img_wrapper{
+
+        }
+        .project_head{
+            @include text(25px,400,$white-color,26px,left,capitalize);
+        }
+        .project_text{
+            @include text(15px,normal,$white-color,26px,left,capitalize);
+        }
+        .lmore-link{
+            @include text(15px,normal,#FF9C00,26px,left,capitalize);
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease;
+            &:hover{
+                transform: translateX(10px);
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+}

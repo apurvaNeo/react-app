@@ -1,0 +1,34 @@
+@use "../../styles/abstract/variable" as *;;
+@use "../../styles/abstract/mixins.scss" as *;
+.Top_section{
+    background: linear-gradient(to bottom, rgba(26, 71, 137, 1) 0%, rgba(109, 187, 217, 1) 100%);
+    padding:20px 0 120px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.header_wrapper{
+    .nav-menu{
+        ul{
+            li{
+                margin: 0 12px;
+                a{
+                    color: $white-color;
+                    text-decoration: none;
+                    font-weight: normal;
+                    border-bottom: 3px solid transparent;
+                    padding: 10px 0;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        color: $primary-color;
+                        // font-weight: bold;
+                        border-bottom: 3px solid $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    .btn_wrapper{
+        .btn-primary{
+            @include button($primary-color, $white-color, 10px, 25px, 5px);
+        }
+    }
+}
