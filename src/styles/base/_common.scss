@@ -18,3 +18,25 @@
         @include text(15px,normal,#28384E,26px,center,capitalize);
     }
 }
+
+
+//table api
+
+.table_wrapper{
+    margin:80px 0;
+    .table{
+        thead{
+            th{
+                background-color: $primary-color;
+                color: $white-color;
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
