@@ -6,7 +6,7 @@ const WorkWithUs = () => {
         <div className="workwithus_wrapper">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-6 mb-4 mb-md-0">
                         <img src={workImg} className="img-fluid" alt="Interested To Work With Us?" />
                     </div>
                     <div className="col-md-6 ps-5 workus_text">

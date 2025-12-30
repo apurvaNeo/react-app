@@ -1,5 +1,5 @@
 import Header from '../layout/header/Header';
-
+import Footer from '../layout/footer/Footer'
 const ContactPage = ()=>{
     return(
         <div>
@@ -43,7 +43,7 @@ const ContactPage = ()=>{
                     </div>
                 </div>
             </div>
-            
+            <Footer/>
         </div>
     )
 }

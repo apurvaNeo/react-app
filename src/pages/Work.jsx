@@ -1,5 +1,5 @@
 import Header from '../layout/header/Header';
-
+import Footer from '../layout/footer/Footer'
 const WorkPage = ()=>{
     return(
         <div>
@@ -7,6 +7,7 @@ const WorkPage = ()=>{
                 <Header/>
             </div>
             <h2>Review</h2>
+            <Footer/>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 
 import footerLogo from "../../assets/images/footer_logo.png";
 import SocialIcons from '../../components/SocialIcons';
-
+import { NavLink } from 'react-router-dom'
 
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
    <div className="footer_wrapper">
       <div className="container mt-2 mb-4">
          <div className="row">
-            <div className="col-md-4 fdect_1">
+            <div className="col-md-4 fdect_1 mb-5 mb-md-0">
                 <img src={footerLogo} className="mb-4" alt='footerLogo' />
                 <p>On the other hand, we denounce with righteous indignation and dislike men.</p>
                 <h6 className="footer_title">Interested To Work With Us</h6>
@@ -18,14 +18,14 @@ const Footer = () => {
                     <button className="btn btn-primary" type="button">Send</button>
                 </div>
             </div>
-            <div className="col-md-3 offset-md-1 fsect_2">
+            <div className="col-md-3 offset-md-1 fsect_2 mb-5 mb-md-0">
                 <h6 className="footer_title">Company</h6>
                 <ul className="list-unstyled">
-                    <li>Home</li>
-                    <li>Our Work</li>
-                    <li>About Us</li>
-                    <li>Review</li>
-                    <li>Contact Us</li>
+                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><NavLink to="/work">Our Work</NavLink></li>
+                    <li><NavLink to="/about">About Us</NavLink></li>
+                    <li><NavLink to="/review">Review</NavLink></li>
+                    <li><NavLink to="/contact">Contact Us</NavLink></li>
                 </ul>
             </div>
             <div className="col-md-3 offset-md-1 fsect_3">

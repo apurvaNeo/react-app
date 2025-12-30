@@ -27,14 +27,18 @@
     .fsect_2{
         ul{
             li{
-                 @include text(15px,normal,$white-color,18px,left,capitalize);
-                 margin-bottom: 10px;
-                 display: inline-block;
-                 width: 100%;
-                 transition: 0.3s all ease-in-out;
-                &:hover{
-                    color: $primary-color;
-                    text-decoration: underline;
+                a{
+
+                
+                    @include text(15px,normal,$white-color,18px,left,capitalize);
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    width: 100%;
+                    transition: 0.3s all ease-in-out;
+                    &:hover{
+                        color: $primary-color;
+                        text-decoration: underline;
+                    }
                 }
             }
         }

@@ -1,5 +1,5 @@
 import Header from '../layout/header/Header';
-
+import Footer from '../layout/footer/Footer'
 const ReviewPage = ()=>{
     return(
         <div>
@@ -7,6 +7,7 @@ const ReviewPage = ()=>{
                 <Header/>
             </div>
             <h2>Review</h2>
+            <Footer/>
         </div>
     )
 }

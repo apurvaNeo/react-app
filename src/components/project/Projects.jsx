@@ -10,7 +10,7 @@ const Projects = () =>{
                 <div className="row">
                     {
                         ProjectData.map((project)=>(
-                            <div className="col-md-4 project_card" key={project.id}>
+                            <div className="col-md-4 project_card mb-5 mb-md-0" key={project.id}>
                                 <div className="img_wrapper mb-3">
                                     <img src={project.image} className="img-fluid" alt={project.altText}/>
                                 </div>
