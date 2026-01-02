@@ -72,7 +72,7 @@ const ContactPage = ()=>{
             <div className='contactus_wrapper'>
                 <div className="container my-4 banner_section">
                     
-                    <div className='contact_form'>
+                    <div className='contact_form mb-5'>
                         <div className='row'>
                             <div className='col-md-8 mx-auto'>
                                 <div className='Section_heading mb-4'>
@@ -81,24 +81,24 @@ const ContactPage = ()=>{
                                 <form>
                                     <div className='form-group'>
                                         <label>Name</label>
-                                        <input type='text' onChange={handleChange} value={userdata.name} name="name"  placeholder="Name" className='form-control'/>
+                                        <input type='text' onChange={handleChange} value={userdata.name} name="name"  placeholder="Apurva Joshi" className='form-control'/>
                                         {errors.name && <small className="text-danger">{errors.name}</small>}
                                     </div>
                                     <div className='form-group'>
                                         <label>Email</label>
-                                        <input type='email' onChange={handleChange} name="email" value={userdata.email} placeholder="Email" className='form-control'/>
+                                        <input type='email' onChange={handleChange} name="email" value={userdata.email} placeholder="apurva.joshi@neosoftmail.com" className='form-control'/>
                                         {errors.email && <small className="text-danger">{errors.email}</small>}
                                         
                                     </div>
                                     <div className='form-group'>
                                         <label>Mobile</label>
-                                        <input type='text' onChange={handleChange} name="mobile" value={userdata.mobile} placeholder="Mobile" className='form-control'/>
+                                        <input type='text' onChange={handleChange} name="mobile" value={userdata.mobile} placeholder="9960520424" className='form-control'/>
                                         {errors.mobile && <small className="text-danger">{errors.mobile}</small>}
                                     </div>
                                     <div className='form-group'>
                                         <label htmlFor="city">City</label>
                                         <select id="city" onChange={handleChange} name="city" value={userdata.city} className='form-control'>
-                                            <option value="">Select City</option>
+                                            <option value="" disabled>Pune</option>
                                             <option value="mumbai">Mumbai</option>
                                             <option value="pune">Pune</option>
                                             <option value="nashik">Nashik</option>

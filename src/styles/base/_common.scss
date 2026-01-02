@@ -47,8 +47,11 @@
     .form-group{
         margin-bottom:25px;
         label{
-            @include text(15px,bold,$secondary-color,18px,left,capitalize);
+            @include text(18px,600,$secondary-color,18px,left,capitalize);
             margin-bottom: 10px;
+        }
+        .form-control{
+            padding: 10px 15px;
         }
     }
 }
