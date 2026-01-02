@@ -1,12 +1,14 @@
 import Header from '../layout/header/Header';
-import Footer from '../layout/footer/Footer'
+import Footer from '../layout/footer/Footer';
+import AboutUs from '../components/about/About';
+
 const AboutPage = ()=>{
     return(
         <div>
             <div className='Top_section'>
                 <Header/>
             </div>
-            <h2>About</h2>
+            <AboutUs/>
             <Footer/>
         </div>
     )

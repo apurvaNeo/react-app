@@ -1,12 +1,14 @@
 import Header from '../layout/header/Header';
-import Footer from '../layout/footer/Footer'
+import Footer from '../layout/footer/Footer';
+import Projects from '../components/project/Projects';
+
 const WorkPage = ()=>{
     return(
         <div>
             <div className='Top_section'>
                 <Header/>
             </div>
-            <h2>Review</h2>
+            <Projects />
             <Footer/>
         </div>
     )

@@ -23,7 +23,7 @@
 //table api
 
 .table_wrapper{
-    margin:80px 0;
+    margin: 40px 0 80px;
     .table{
         thead{
             th{
@@ -37,6 +37,18 @@
                     color: $secondary-color;
                 }
             }
+        }
+    }
+}
+
+//contact form
+
+.contact_form{
+    .form-group{
+        margin-bottom:25px;
+        label{
+            @include text(15px,bold,$secondary-color,18px,left,capitalize);
+            margin-bottom: 10px;
         }
     }
 }

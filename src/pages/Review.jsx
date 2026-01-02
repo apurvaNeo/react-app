@@ -1,17 +1,18 @@
 import Header from '../layout/header/Header';
 import Footer from '../layout/footer/Footer';
+
 import React,{useState,useEffect} from 'react';
 
 
 const ReviewPage = ()=>{
     const [users,setUser] = useState([]);
-    const [search,setSearch] = useState('');
+    // const [search,setSearch] = useState('');
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then(data => setUser(data))
         .catch(error => console.error('Error:', error));
-    },[]);
+    });
 
     return(
         <div>
@@ -19,15 +20,18 @@ const ReviewPage = ()=>{
                 <Header/>
             </div>
             <div className='container'>
+                <div className='Section_heading mt-5 mb-4'>
+                    <h2>API Integration</h2>
+                </div>
                 <div className='table_wrapper'>
-                    <h5 className='mb-3'>API Integration</h5>
-                    <div className='row d-flex justify-content-end'>
+                    
+                    {/* <div className='row d-flex justify-content-end'>
                         <div className='col-md-5'>
                             <div className='form-group mb-3'>
                                 <input type="text" placeholder='search by Name' className='form-control' value={search} onChange={(e)=>setSearch(e.target.value)} />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className='table-responsive'>
                         <table className="table">
                             <thead>
