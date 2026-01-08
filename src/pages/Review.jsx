@@ -3,20 +3,13 @@ import Footer from '../layout/footer/Footer';
 
 import React,{useState,useEffect} from 'react';
 //read route parameter from url and change route
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ReviewPage = ()=>{
     const [users,setUser] = useState([]);
-    const { id } = useParams(); // reads id from route
     const navigate = useNavigate();
-    // read id from URL
-    useEffect(() => {
-        console.log("Route ID:", id);
-    }, [id]);
-
-
+   
     useEffect(()=>{
-        
         const fetchUser = async()=>{
             try{
                 const response = await fetch ("https://jsonplaceholder.typicode.com/users");
@@ -30,13 +23,7 @@ const ReviewPage = ()=>{
         fetchUser();
     },[]);
 
-    // FILTER USING URL PARAM
-    const filteredUsers = id
-    ? users.filter(user => user.id === Number(id))
-    : users;
-    // const filterId = users.filter(user => user.id === Number(id));
-    // console.log(filterId);
-
+    
     return(
         <div>
             <div className='Top_section'>
@@ -59,10 +46,10 @@ const ReviewPage = ()=>{
                                 </tr>
                             </thead>
                             <tbody>
-                                {filteredUsers.map((user)=>{
+                                {users.map((user)=>{
                                     return(
                                         <tr key={user.id} style={{ cursor: "pointer" }} 
-                                        onClick={() => navigate(`/review/${user.id}`)}>
+                                        onClick={() =>{console.log('ID:',user.id); navigate(`/review/${user.id}`)}}>
                                             <td>{user.name}</td>
                                             <td>{user.email}</td>
                                             <td>{user.phone}</td>
