@@ -1,53 +1,43 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+
 import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom'
 
 //pages
+import HomePage from "./pages/Home";
 import ContactPage from './pages/Contact';
 import AboutPage from './pages/About';
 import ReviewPage from './pages/Review';
 import WorkPage from './pages/Work';
-
-//componants
-import Banner from './components/banner/Banner';
-import Header from './layout/header/Header';
-import Services from './components/service/Services';
-import AboutUs from './components/about/About';
-import WorkWithUs from './components/work/WorkwithUs';
-import Projects from './components/project/Projects';
-import Footer from "./layout/footer/Footer";
+import LoginPage from "./pages/Login";
 import "./styles/main.scss";
+
+
+import { AuthProvider } from "./pages/AuthContext";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 function App() {
   return (
     <>
-      {/* Header should be ONCE */}
-      
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <div className="Top_section">
-                <Header />
-                <Banner />
-              </div>
-              <Services />
-              <AboutUs />
-              <Projects />
-              <WorkWithUs />
-              <Footer/>
-            </>
-          }
-        />
 
-        <Route path="/work" element={<WorkPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/review" element={<ReviewPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+        <Routes>
+
+          {/* Login page */}
+          <Route path="/" element={<LoginPage />} />
+
+          {/* Home page ( access to User + Admin) */}
+          <Route path="/home" element={<ProtectedRoute ><HomePage/></ProtectedRoute>}/>
+
+          {/* access to admin only (other pages) */}
+          <Route path="/work" element={<ProtectedRoute role="admin"><WorkPage /></ProtectedRoute>} />
+          <Route path="/about" element={<ProtectedRoute role="admin"><AboutPage /></ProtectedRoute>} />
+          <Route path="/review" element={<ProtectedRoute role="admin"><ReviewPage /></ProtectedRoute>} />
+          <Route path="/review/:id" element={<ProtectedRoute role="admin"><ReviewPage /></ProtectedRoute>} />
+          <Route path="/contact" element={<ProtectedRoute role="admin"><ContactPage /></ProtectedRoute>} />
+    
+        </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </>
   );
 }
